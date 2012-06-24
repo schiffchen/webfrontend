@@ -32,5 +32,5 @@ get '/anonlogin.json' do
   content_type :json
   { :jid => 'anonymous@battleship.me',
     :password => '4080da143eca2ca421d25e4ee9bf1ec5d7b0ddbd',
-    :ressource => [Time.now.to_i, Random.rand(1337)].join}.to_json
+    :resource => [Time.now.to_i, Random.rand(1337)].join}.to_json
 end
