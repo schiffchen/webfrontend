@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Battleship.me</title>
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1 id="title">Battleship Me</h1>
+        <img src="images/logo.png">
+      </div>
+      <div id="twocols" class="clearfix">
+        <div id="top10">
+          <h2>Die besten Spieler</h2>
+          
+          <ol>
+            <% @players.first(5).each do |player| %>
+            <li><%= player.jid.split('@')[0] %></li>
+            <% end %>
+          </ol>
+        </div>
+        <div id="about">
+          <h2>Über das Projekt</h2>
+          <p>
+            Battleship Me ist ein Schiffe Versenken bei dem die Spieler über das Internet
+            gegeneinander spielen können. Das besondere: anstatt die Kommunikation selber
+            zu bauen, nutzt Battleship Me das Extensible Messaging and Presence Protocol,
+            kurz XMPP. Es gibt bereits Clients für Android und Windows Phone,
+            weitere Plattformen sind geplant.
+          </p>
+        </div>
+      </div>
+      <div id="footer">
+        <p>&copy; 2012 by The Schiffchen Team</p>
+      </div>
+    </div>
+  </body>
+</html>
