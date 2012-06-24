@@ -27,3 +27,8 @@ get '/' do
   
   erb :index
 end
+
+get '/anonlogin.json' do
+  content_type :json
+  { :jid => 'anonymous@battleship.me', :password => '4080da143eca2ca421d25e4ee9bf1ec5d7b0ddbd' }.to_json
+end
